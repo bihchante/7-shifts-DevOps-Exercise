@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: postgres
+ labels:
+  author: chante
+  type: postgres
+  namespace: test
+spec:
+ selector:
+  matchLabels:
+   type: postgres
+ template:
+  metadata:
+    name: postgres
+    labels:
+     type: postgres
+  spec:
+   containers:
+    - name: postgres
+      image: postgres
+      resources:
+       limits:
+        cpu: 200m
+      requests:
+       cpu: 100m

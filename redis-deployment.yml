@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: redis-Deployment
+ labels:
+  author: chante
+  type: redis
+spec:
+ selector:
+  matchLabels:
+   type: redis
+  template:
+   metadata:
+    name: redis-pod
+    labels:
+     type: redis
+   spec:
+    containers:
+     - name: redis
+       image: redis:5.0.4
+       resources:
+        limits:
+         cpu: 200m
+        requests:
+         cpu: 100m
