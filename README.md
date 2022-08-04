@@ -124,5 +124,7 @@ spec:
 
 - kubectl create postgres-autoscaling.yml
 
-
-
+The following IAM roles will be put in palce:
+1. create namespace for logical partition
+2. create RBAC roles
+3. implement secret
