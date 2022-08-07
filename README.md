@@ -138,3 +138,4 @@ The following IAM roles will be put in palce:
 2. create RBAC roles
 3. implement secret
 made some changes in the redis-deployment file at the level of the metadata
+To apply the above configs on multiple environments (staging vs production), i will run on the pipeline using Jenkins, testing if it is working correctly, and if so then, i will move to the stagging environment and lastly the production environment 
