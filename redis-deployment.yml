@@ -2,6 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+namespace: test
  name: redis-deployment
  labels:
   author: chante
