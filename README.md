@@ -16,6 +16,13 @@ Steps:
 
 1. created 4 yml files using atom editor:
 
+vim Namespace.yml
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test-ns
+
 - vim redis-deployment.yml
 ---
 apiVersion: apps/v1
