@@ -10,7 +10,7 @@ spec:
  selector:
   matchLabels:
    type: redis
-  template:
+ template:
    metadata:
     name: redis-pod
     labels:
