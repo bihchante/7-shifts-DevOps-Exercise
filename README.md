@@ -45,7 +45,9 @@ spec:
         cpu: 100m
 
 - kubectl apply -f redis-deployment.yml
-
+- kubectl describe deployment.apps/redis-deployment | grep -i image
+- kubectl set image deployment.apps/redis-deployment redis=6.2
+- kubectl rollout undo deployment.apps/redis-deployment
 
 vim postgres-deployment.yml
 ---
